@@ -1,0 +1,1 @@
+take a look into clip-path css property to try and make the curved background sections or make a massive circle with overflow hidden
