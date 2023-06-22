@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as var;
+
+.primary-btn{
+    font-size: 1.125rem;
+    font-family: "Manrope";
+    background: var.$eucalyptus;
+    color: var.$darkPurple;
+    border: 2px var.$eucalyptus solid;
+    padding: 0.8rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.primary-btn:is(:hover, :focus){
+    background: none;
+}
+
+.secondary-btn{
+    color: var.$white;
+    font-size: 1.125rem;
+    cursor: pointer;
+    background: none;
+    font-family: "Manrope";
+    font-weight: 700;
+    border: none;
+}
+.secondary-btn:is(:hover, :focus){
+    border-bottom: 2px var.$eucalyptus solid;
+}
