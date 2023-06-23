@@ -161,6 +161,7 @@ h3{
 }
 
 #hero-image{
+    /*add clamp to the image width*/
     width: 52.5%;
     transform: translate(-50%, -70%);
     top: 730px;
