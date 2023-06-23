@@ -1,0 +1,178 @@
+:root{
+    /*base colors*/
+    --dark-purple: hsl(273, 85%, 13%);
+    --eucalyptus: hsl(150, 100%, 63%);
+    --davys-gray: hsl(271, 12%, 34%);
+    --ghost-white: hsl(276, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+
+    /*headings font weight*/
+    --semi-bold: 600;
+
+    /*buttons transitions*/
+    --btn-trans: all 0.3s;
+}
+
+/*variable fonts declarations*/
+@font-face{
+    font-family: 'Fraunces';
+    src: url(./assets/fonts/fraunces/Fraunces-VariableFont_wght.ttf) format('truetype');
+    font-weight: 1 1000;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url(./assets/fonts/manrope/Manrope-VariableFont_wght.ttf) format('truetype');
+    font-weight: 1 1000;
+}
+
+/*3 below declarations are a CSS Reset*/
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    overflow-wrap: break-word;
+}
+
+button, input, textarea, select{
+    font: inherit;
+    color: inherit;
+}
+
+body{
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Manrope';
+    font-size: 1.125rem;
+    line-height: 2rem;
+    color: var(--dark-purple);
+}
+
+/*utility classes*/
+.u-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.u-absolute-img{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+h1, h2, h3{
+    font-family: 'Fraunces';
+    font-weight: var(--semi-bold);
+}
+
+.main-heading{
+    font-size: 5rem;
+    line-height: 5rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+h2{
+    font-size: 3.5rem;
+    line-height: 4rem;
+}
+
+h3{
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+/*utility class for both primary and secondary button*/
+.general-btn{
+    cursor: pointer;
+    font-weight: 700;
+    transition: var(--btn-trans);
+}
+
+.primary-btn{
+    background: var(--eucalyptus);
+    border: 2px var(--eucalyptus) solid;
+    padding: 0.75rem 1.25rem;
+}
+
+.primary-btn:is(:focus, :hover){
+    background: none;
+    color: var(--eucalyptus)
+}
+
+/*decided to make my own style for secondary button design, might have overdone it*/
+.secondary-btn{
+    background: none;
+    color: var(--white);
+    border: none;
+    position: relative;
+    text-shadow: 0 0 10px hsla(0, 0%, 100%, 0.6);
+}
+
+.secondary-btn::after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--eucalyptus);
+    transition: var(--btn-trans);
+}
+
+.secondary-btn:is(:focus, :hover){
+    color: var(--eucalyptus);
+    text-shadow: none;
+}
+
+.secondary-btn:is(:focus, :hover)::after{
+    width: 100%;
+}
+
+.purple-bg{
+    position: relative;
+    width: 100%;
+    height: 730px;
+    background: var(--dark-purple);
+    clip-path: ellipse(150% 95% at 50% 0);
+    text-align: center;
+}
+
+.nav{
+    justify-content: space-between;
+    padding: 4rem 10.5rem 2.5rem 10.5rem;
+}
+
+.main-heading>span{
+    position: relative;
+}
+
+.main-heading>span::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: var(--eucalyptus);
+    bottom: 7px;
+    left: 0;
+}
+
+#hero-image{
+    width: 52.5%;
+    transform: translate(-50%, -70%);
+    top: 730px;
+    left: 50%;
+}
+
+#pattern1{
+    top: 40%;
+    left: 2%;
+}
+
+#pattern2{
+    top: 60%;
+    right: -9.5%;
+}

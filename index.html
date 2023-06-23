@@ -4,26 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./main.css">
   <title>Frontend Mentor | Workit landing page</title>
 </head>
 <body>
-  <header class="bg-circle bg-circle__purple">
-
-    <nav>
-      <img src="./assets/images/logo-light.svg" alt="Light Workit Logo">
-      <button class="secondary-btn">Apply for access</button>
-    </nav>
-    
-    <h1>Data tailored to your needs.</h1>
-    <button class="primary-btn">Learn more</button>
-
+  <header class="purple-bg">
     <!--bg patterns and hero image positioned absolutely
     I've left the alt attribute empty to make screen readers not read the images, I don't know if it's good practice-->
-    <img src="./assets/images/bg-pattern-1.svg" alt="" class="bg-pattern bg-pattern-1">
-    <img src="./assets/images/bg-pattern-2.svg" alt="" class="bg-pattern bg-pattern-2">
-    <img src="./assets/images/image-hero.webp" alt="" class="bg-pattern hero-image">
+    <img src="./assets/images/bg-pattern-1.svg" alt="" id="pattern1" class="u-absolute-img">
+    <img src="./assets/images/bg-pattern-2.svg" alt="" id="pattern2" class="u-absolute-img">
+
+    <nav class="nav u-flex">
+      <a href="#"><img src="./assets/images/logo-light.svg" alt="Light Work it Logo"></a>
+      <button class="secondary-btn general-btn">Apply for access</button>
+    </nav>
+    <h1 class="main-heading">Data <span>tailored</span> to <br> your needs.</h1>
+    <button class="primary-btn general-btn">Learn more</button>
   </header>
+  <img src="./assets/images/image-hero.webp" alt="" id="hero-image" class="u-absolute-img">
   
   <section class="u-grid">
     <div class="info-sections">
@@ -61,7 +59,8 @@
         beta tester for our app and kickstart your company. Apply for access below and I’ll be
         in touch to schedule a call.
       </p>
-      <button class="primary-btn">Apply for access</button>
+      <button class="primary-btn general-btn">Apply for access</button>
+      <img src="./assets/images/bg-pattern-3.svg" alt="">
     </article>
   </section>
 
