@@ -270,8 +270,9 @@ h3{
     gap: 1.5rem;
 }
 
-.icons-container path:hover {
+.icons-container>a:hover path{
     fill: var(--dark-purple);
+    transition: var(--btn-trans);
 }
 
 .attribution{
