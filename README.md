@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend mentor solution](https://www.frontendmentor.io/solutions/desktopfirst-landing-page-with-many-absolute-positioned-elements-3_oHqu4i4U)
+- Live Site URL: [Github Pages](https://luckyszakul0.github.io/FM-workit-landing-page/)
 
 ## My process
 
