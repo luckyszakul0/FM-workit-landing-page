@@ -46,6 +46,7 @@ button, input, textarea, select{
 }
 
 body{
+    overflow-x: hidden;
     height: 100vh;
     width: 100vw;
     -webkit-font-smoothing: antialiased;
@@ -151,7 +152,7 @@ h3{
 .purple-bg{
     position: relative;
     width: 100%;
-    height: 730px;
+    height: 85%;
     background: var(--dark-purple);
     clip-path: var(--bg-circles-path);
     text-align: center;
@@ -181,7 +182,7 @@ h3{
 #hero-image{
     width: clamp(320px, 65%, 767px);
     transform: translate(-50%, -70%);
-    top: 730px;
+    top: 85%;
     left: 50%;
     z-index: 10;
 }
@@ -193,7 +194,7 @@ h3{
 
 #pattern2{
     top: 60%;
-    right: -9.5%;
+    left: 99%;
 }
 /*------------------------------------------------*/
 
@@ -201,7 +202,7 @@ h3{
 .ghost-white-bg{
     clip-path: var(--bg-circles-path);
     width: 100%;
-    height: 800px;
+    height: 90%;
     background: var(--ghost-white);
     position: relative;
     top: -85px;
@@ -213,7 +214,7 @@ h3{
     width: 25%;
     text-align: center;
     flex-direction: column;
-    gap: 1.75rem
+    gap: 4rem
 }
 
 .info-numbers{
@@ -221,15 +222,19 @@ h3{
     border-radius: 50%;
     font-family: 'Fraunces';
     font-size: 1.5rem;
-    width: 3.5rem;
+    width: 17.5%;
     aspect-ratio: 1/1;
-    margin-bottom: 30px;
+}
+.info-text{
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
 }
 /*-----------------------------------------------*/
 
 /*founder section styles*/
 #founder-img{
-    width: 477px;
+    width: clamp(270px, 40%, 500px);
     aspect-ratio: 1/1;
 }
 
@@ -248,8 +253,9 @@ h3{
     padding: 3.5rem;
     align-items: flex-start;
     position: absolute;
-    top: 33%;
-    left: 33%;
+    transform: translate(-100%, -100%);
+    top: 100%;
+    left: 100%;
 }
 
 #pattern3{
@@ -282,4 +288,57 @@ h3{
 
 .attribution a{
     color: hsl(228, 45%, 44%); 
+}
+/*----------------------------------------*/
+/*device-specific styles
+tablet design*/
+@media screen and (max-width: 850px){
+    /*purple bg section*/
+    .nav{
+        padding: 2.5rem 4.5rem 3.5rem 4.5rem;
+    }
+    #pattern1{
+        left: -5%;
+    }
+
+    /*white ellipse section*/
+    .ghost-white-bg{
+        flex-direction: column;
+        gap: 3rem;
+        height: 110%;
+    }
+    .info-sections{
+        flex-direction: row;
+        gap: 2.5rem;
+        width: 90%;
+    }
+    .info-numbers{
+        width: 9%;
+    }
+    .info-text{
+        width: 70%;
+        gap: 1rem;
+    }
+    .info-text>h3{
+        width: 100%;
+    }
+
+    /*founder section*/
+    .founder-section{
+        margin: 0 4% 0 4%;
+        height: 80%;
+    }
+    .founder-description{
+        width: 75%;
+    }
+    .footer{
+        margin-top: 6rem;
+    }
+}
+
+/*phone design*/
+@media screen and (max-width: 500px){
+    #pattern1, #pattern2, #pattern3{
+        display: none;
+    }
 }
