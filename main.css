@@ -7,7 +7,7 @@
     --white: hsl(0, 0%, 100%);
 
     /*headings font weight*/
-    --semi-bold: 600;
+    --semi-bold: 500;
 
     /*buttons transitions*/
     --btn-trans: all 0.3s;
@@ -180,7 +180,7 @@ h3{
 }
 
 #hero-image{
-    width: clamp(320px, 65%, 767px);
+    width: clamp(320px, 70%, 767px);
     transform: translate(-50%, -70%);
     top: 85%;
     left: 50%;
@@ -228,7 +228,9 @@ h3{
 .info-text{
     flex-direction: column;
     gap: 2rem;
-    text-align: left;
+}
+.info-text>p{
+    color: var(--davys-gray)
 }
 /*-----------------------------------------------*/
 
@@ -241,6 +243,7 @@ h3{
 .founder-section{
     margin: 0 10% 0 10%;
     position: relative;
+    height: 80%;
 }
 
 .founder-description{
@@ -254,8 +257,8 @@ h3{
     align-items: flex-start;
     position: absolute;
     transform: translate(-100%, -100%);
-    top: 100%;
-    left: 100%;
+    top: 90%;
+    left: 95%;
 }
 
 #pattern3{
@@ -267,7 +270,7 @@ h3{
 
 /*footer and attribution styles*/
 .footer{
-    margin-top: 14rem;
+    margin-top: 8rem;
     flex-direction: column;
     gap: 3rem;
 }
@@ -300,6 +303,12 @@ tablet design*/
     #pattern1{
         left: -5%;
     }
+    .purple-bg{
+        height: 75%;
+    }
+    #hero-image{
+        top: 75%;
+    }
 
     /*white ellipse section*/
     .ghost-white-bg{
@@ -318,6 +327,7 @@ tablet design*/
     .info-text{
         width: 70%;
         gap: 1rem;
+        text-align: left;
     }
     .info-text>h3{
         width: 100%;
@@ -326,19 +336,75 @@ tablet design*/
     /*founder section*/
     .founder-section{
         margin: 0 4% 0 4%;
-        height: 80%;
     }
     .founder-description{
         width: 75%;
+        top: 100%;
+        left: 100%;
+    }
+    .founder-description>h2{
+        font-size: 3.5rem;
     }
     .footer{
         margin-top: 6rem;
     }
 }
 
-/*phone design*/
+/*smartphone design*/
 @media screen and (max-width: 500px){
+    /*purple bg section*/
     #pattern1, #pattern2, #pattern3{
         display: none;
+    }
+    .purple-bg{
+        height: 60%;
+    }
+    #hero-image{
+        top: 60%;
+    }
+    .nav{
+        padding: 3rem 1rem 3.5rem 1rem;
+    }
+    .main-heading{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .main-heading>span::after{
+        bottom: 2px;
+    }
+
+    /*white ellipse section*/
+    .ghost-white-bg{
+        height: 150%;
+        gap: 4rem;
+    }
+    .info-sections{
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .info-text{
+        width: 97.5%;
+        text-align: center;
+    }
+    .info-numbers{
+        width: 17.5%;
+    }
+
+    /*founder section*/
+    .founder-section{
+        text-align: center;
+        height: 70%;
+    }
+    .founder-description{
+        width: 100%;
+        height: 65%;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    .founder-description>h2{
+        font-size: 2rem;
+        line-height: 2rem;
     }
 }
