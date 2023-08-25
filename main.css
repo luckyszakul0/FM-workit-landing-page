@@ -88,6 +88,7 @@ h1, h2, h3{
     line-height: 5rem;
     color: var(--white);
     margin-bottom: 2rem;
+    z-index: 15;
 }
 
 h2{
@@ -112,6 +113,7 @@ h3{
     border: 2px var(--eucalyptus) solid;
     padding: 0.75rem 1.25rem;
     color: var(--dark-purple);
+    z-index: 100;
 }
 
 .primary-btn:is(:focus, :hover){
@@ -180,7 +182,7 @@ h3{
 }
 
 #hero-image{
-    width: clamp(320px, 70%, 767px);
+    height: clamp(100px, 45%, 800px);
     transform: translate(-50%, -70%);
     top: 85%;
     left: 50%;
@@ -190,6 +192,7 @@ h3{
 #pattern1{
     top: 40%;
     left: 2%;
+    z-index: -10;
 }
 
 #pattern2{
@@ -308,6 +311,7 @@ tablet design*/
     }
     #hero-image{
         top: 75%;
+        height: clamp(100px, 30%, 800px);
     }
 
     /*white ellipse section*/
@@ -357,10 +361,11 @@ tablet design*/
         display: none;
     }
     .purple-bg{
-        height: 60%;
+        height: 70%;
     }
     #hero-image{
-        top: 60%;
+        top: 70%;
+        height: clamp(100px, 25%, 800px);
     }
     .nav{
         padding: 3rem 1rem 3.5rem 1rem;
@@ -375,7 +380,7 @@ tablet design*/
 
     /*white ellipse section*/
     .ghost-white-bg{
-        height: 150%;
+        height: 165%;
         gap: 4rem;
     }
     .info-sections{
@@ -402,6 +407,7 @@ tablet design*/
         align-items: center;
         gap: 1rem;
         padding: 1.5rem;
+        font-size: 90%;
     }
     .founder-description>h2{
         font-size: 2rem;
